@@ -1,8 +1,7 @@
-import requests,json,re,calendar,time,cloudscraper,random,aiohttp,asyncio,httpx,random
+import requests,json,re,calendar,time,cloudscraper,random,aiohttp,asyncio,httpx,random,threading,os
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning 
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-import threading,random
 from termcolor import colored
 from threading import Thread, Lock
 from colorama import Fore, Style, init
@@ -13,12 +12,7 @@ from dhooks import Webhook, Embed
 from autosolveclient import AutoSolve
 import webbrowser
 from bs4 import BeautifulSoup
-import sentry_sdk
-from sentry_sdk import configure_scope, capture_exception
-sentry_sdk.utils.MAX_STRING_LENGTH = 99999999
-import re
 import urllib.parse
-import httpx
 from tasks import LoadTasks as TaskManager
 import paymentSupportASYNC as paymentSupport
 import threeDsSupportASYNC as threeDsSupport
